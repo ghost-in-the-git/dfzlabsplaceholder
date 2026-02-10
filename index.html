@@ -12,13 +12,30 @@
 </head>
 <body>
 
+  <!-- Page Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-text" data-text="DFZ LABS">DFZ LABS</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- Gradient Orb (follows mouse in hero) -->
+  <div class="gradient-orb" id="gradient-orb"></div>
+
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">DFZ LABS</a>
+      <a href="#" class="nav-logo" data-magnetic>DFZ LABS</a>
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-magnetic>About</a>
+        <a href="#contact" data-magnetic>Contact</a>
       </div>
     </div>
   </nav>
@@ -28,10 +45,11 @@
     <canvas id="hero-canvas"></canvas>
     <div class="hero-content">
       <h1 class="hero-title">
-        <span class="hero-line">DFZ</span>
-        <span class="hero-line">LABS</span>
+        <span class="hero-line" data-split>DFZ</span>
+        <span class="hero-line" data-split>LABS</span>
       </h1>
-      <p class="hero-subtitle">Digital Collectibles Company</p>
+      <div class="hero-divider"></div>
+      <p class="hero-subtitle" data-split>Digital Collectibles Company</p>
       <div class="hero-scroll">
         <span>Scroll</span>
         <div class="scroll-line"></div>
@@ -40,12 +58,12 @@
   </section>
 
   <!-- About Section -->
-  <section class="about" id="about">
+  <section class="about" id="about" data-parallax>
     <div class="container">
       <div class="about-grid">
         <div class="about-label fade-in">Who We Are</div>
         <div class="about-content">
-          <h2 class="fade-in">DFZ LABS is a digital collectibles company.</h2>
+          <h2 class="fade-in reveal-text">DFZ LABS is a digital collectibles company.</h2>
           <p class="fade-in">We create, curate, and build technology for the next generation of digital ownership. Our mission is to push the boundaries of what collectibles can be in the digital age.</p>
         </div>
       </div>
@@ -80,17 +98,20 @@
   <section class="values" id="values">
     <div class="container">
       <div class="values-grid">
-        <div class="value-card fade-in">
+        <div class="value-card fade-in" data-tilt>
+          <div class="card-glow"></div>
           <span class="value-number">01</span>
           <h3>Create</h3>
           <p>Building digital collectibles that redefine art and ownership for the modern era.</p>
         </div>
-        <div class="value-card fade-in">
+        <div class="value-card fade-in" data-tilt>
+          <div class="card-glow"></div>
           <span class="value-number">02</span>
           <h3>Innovate</h3>
           <p>Pushing the boundaries of technology to deliver experiences that haven't existed before.</p>
         </div>
-        <div class="value-card fade-in">
+        <div class="value-card fade-in" data-tilt>
+          <div class="card-glow"></div>
           <span class="value-number">03</span>
           <h3>Connect</h3>
           <p>Fostering a global community of collectors, creators, and enthusiasts.</p>
@@ -110,17 +131,17 @@
         <form class="contact-form fade-in" id="contact-form">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required autocomplete="name">
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
           </div>
-          <button type="submit" class="btn-submit">
+          <button type="submit" class="btn-submit" data-magnetic>
             <span>Send Message</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
